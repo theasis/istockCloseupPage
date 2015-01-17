@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "iStock File Page Fixes",
+  "description": "Fix various contributor-related elements on an iStock file details page.",
+  "version": "1.0.4",
+  
+  "icons": { 
+          "128": "filepage-icon-1.png" },
+  "content_scripts": [ {
+    "js": [ "jquery-1.10.2.min.js", "theasis_istock_file_page.user.js" ],
+  "matches": [
+    "http://*.istockphoto.com/stock-*.php*",
+    "https://*.istockphoto.com/stock-*.php*",
+    "http://*.istockphoto.com/file_downloads.php*",
+    "https://*.istockphoto.com/file_downloads.php*",
+    "http://*.istockphoto.com/file_closeup_edit.php*",
+    "https://*.istockphoto.com/file_closeup_edit.php*",
+	"http://*.istockphoto.com/photo/*",
+	"http://*.istockphoto.com/vector/*",
+	"http://*.istockphoto.com/video/*",
+	"http://*.istockphoto.com/audio/*",
+	"https://*.istockphoto.com/photo/*",
+	"https://*.istockphoto.com/vector/*",
+	"https://*.istockphoto.com/video/*",
+	"https://*.istockphoto.com/audio/*"
+
+  ] } ]
+}
