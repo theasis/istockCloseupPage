@@ -14,7 +14,7 @@
 // v1.0.2 Download details
 // v1.0.3 Fix DL details for Video (no PP) and Audio (no PP or GI)
 // 17 January 2015 Martin McCarthy
-// v1.0.4 Include latest sale date in the download details
+// v1.0.4 Include latest sale date in the download details; fix id extraction when there's a number in the title
 
 var isVideo=false;
 var isAudio=false;
@@ -87,7 +87,7 @@ function main() {
 	doButtons = function() {
 		var path=location.pathname;
 		var href=location.href;
-		var idArray=href.match(/(\d+)/);
+		var idArray=href.match(/(\d+)\D*($|[&?;])/);
 		var closeupPage=path.match(/^\/(stock-|photo\/|video\/|vector\/|audio\/)/)!=null;
 		var editPage=path.match(/^\/file_closeup_edit/)!=null;
 		var dlPage=path.match(/^\/file_downloads/)!=null;
